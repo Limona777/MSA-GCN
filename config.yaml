@@ -1,0 +1,23 @@
+data:
+  data_dir: "/root/MSA-GCN-master/data"
+  label_dict:
+    depressed: 0
+    normal: 1
+    # 其他情感类别
+  seq_length: 60
+  num_joints: 17
+  scales: [1.0, 0.5, 0.33]
+
+model:
+  in_channels: 3
+  num_classes: 4
+  asst_gcn_channels: 64
+  kernel_size: 3
+  feature_dim: 64
+
+training:
+  batch_size: 32
+  num_epochs: 20
+  learning_rate: 0.001
+  device: "cuda"  # 或 "cpu"
+  prototype_save_path: "/root/MSA-GCN-master/prototypes"
